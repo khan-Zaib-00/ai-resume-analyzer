@@ -32,6 +32,11 @@ with st.sidebar:
     api_key_input = st.text_input("Groq API Key", type="password", help="Get your free API key at console.groq.com")
     if api_key_input:
         os.environ["GROQ_API_KEY"] = api_key_input
+        
+    st.markdown("---")
+    st.markdown("### 👨‍💻 Developed by")
+    st.markdown("**Khan Zaib**")
+    st.markdown("[GitHub](https://github.com/khan-Zaib-00) | [LinkedIn](#)")
 
 col1, col2 = st.columns([1, 1])
 
