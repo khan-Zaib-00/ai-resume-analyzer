@@ -1,0 +1,11 @@
+streamlit
+langchain
+langchain-core
+langchain-groq
+python-dotenv
+PyPDF2
+sentence-transformers
+faiss-cpu
+pandas
+plotly
+scikit-learn
