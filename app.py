@@ -55,8 +55,12 @@ if uploaded_file is not None:
     st.success("Resume uploaded and processed successfully!")
     
     # Check if API Key is set
+    # Try fetching from Streamlit secrets first if deployed
+    if "GROQ_API_KEY" in st.secrets:
+        os.environ["GROQ_API_KEY"] = st.secrets["GROQ_API_KEY"]
+        
     if not os.environ.get("GROQ_API_KEY"):
-        st.error("Please provide a Groq API Key in the sidebar or .env file to continue.")
+        st.error("Please provide a Groq API Key in the sidebar, .env file, or Streamlit Secrets to continue.")
         st.stop()
         
     tabs = st.tabs([
